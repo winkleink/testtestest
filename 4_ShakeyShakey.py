@@ -40,16 +40,16 @@ sleep(0.5)
 #While condition is where current time is less than start time + the duration (15 seconds)
 while time() < endtime:
 	
-	# display the score and the amonut of time left 
+    # display the score and the amonut of time left 
     print("Your Score is: " + str(score) + " -  Time left: " +  str(endtime - time()))
     # if connection made increase score by 1
-	if GPIO.input(4):
+    if GPIO.input(4):
         score =score +1
         sleep(0.005)
 
-		# stay in this while loop until GPIO17 is High or the time runs out
+        # stay in this while loop until GPIO17 is High or the time runs out
         while (not GPIO.input(17)) and (time() < endtime):
-			print("Your Score is: " + str(score) + " -  Time left: " +  str(endtime - time()))
+            print("Your Score is: " + str(score) + " -  Time left: " +  str(endtime - time()))
             
 # Final score            
 print("Your Final Score is: " + str(score))

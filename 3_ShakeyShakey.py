@@ -25,6 +25,6 @@ while True:
         sleep(0.005)
         print("Your score is: " + str(score))
         
-		# stay in this while loop unti GPIO17 is High
-		while not GPIO.input(17):
+        # stay in this while loop unti GPIO17 is High
+        while not GPIO.input(17):
             sleep(0.005)

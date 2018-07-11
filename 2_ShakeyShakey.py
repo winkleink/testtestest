@@ -18,9 +18,9 @@ score=0
 
 # while True means do forever
 while True:
-	# if connection made increase score by 1 and display it    if GPIO.input(4):
-	if GPIO.input(4):
+    # if connection made increase score by 1 and display it    if GPIO.input(4):
+    if GPIO.input(4):
         score=score +1
-		# this little wait manages the de-bounce
+        # this little wait manages the de-bounce
         sleep(0.005)
         print("Your score is: " + str(score))

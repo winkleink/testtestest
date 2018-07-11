@@ -14,7 +14,7 @@ score=0
 
 # while True means do forever
 while True:
-	# if connection made increase score by 1 and display it
+    # if connection made increase score by 1 and display it
     if GPIO.input(4):
         score=score +1
         print("Your score is: " + str(score))
